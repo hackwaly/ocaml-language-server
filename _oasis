@@ -1,0 +1,11 @@
+OASISFormat: 0.4
+Name:        ocaml-language-server
+Version:     0.1.0
+Synopsis:    OCaml language server
+Authors:     hackwaly@qq.com
+License:     GPL-3
+Plugins:     META (0.4), DevFiles (0.4)
+Executable "ocaml-language-server"
+  Path:       src
+  BuildTools: ocamlbuild
+  MainIs:     main.ml

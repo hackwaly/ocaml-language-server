@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: 19e3a838f6275b75b30d99c425b6e3f3)
+# DO NOT EDIT (digest: 84b4db683a2400ae9ffaab4b2b6029c9)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -15,4 +15,14 @@ true: annot, bin_annot
 "_darcs": -traverse
 "_darcs": not_hygienic
 # Executable ocaml-language-server
+"src/main.byte": package(lwt)
+"src/main.byte": package(lwt.ppx)
+"src/main.byte": package(lwt.unix)
+"src/main.byte": package(ppx_deriving_yojson)
+"src/main.byte": package(yojson)
+<src/*.ml{,i,y}>: package(lwt)
+<src/*.ml{,i,y}>: package(lwt.ppx)
+<src/*.ml{,i,y}>: package(lwt.unix)
+<src/*.ml{,i,y}>: package(ppx_deriving_yojson)
+<src/*.ml{,i,y}>: package(yojson)
 # OASIS_STOP

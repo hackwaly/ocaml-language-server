@@ -1,11 +1,16 @@
 OASISFormat: 0.4
 Name:        ocaml-language-server
 Version:     0.1.0
+OCamlVersion: >= 4.01
 Synopsis:    OCaml language server
 Authors:     hackwaly@qq.com
 License:     GPL-3
 Plugins:     META (0.4), DevFiles (0.4)
+AlphaFeatures:         ocamlbuild_more_args
+XOCamlbuildPluginTags: package(ppx_driver.ocamlbuild)
+
 Executable "ocaml-language-server"
   Path:       src
   BuildTools: ocamlbuild
   MainIs:     main.ml
+  BuildDepends: lwt, lwt.unix, lwt.ppx, yojson, ppx_deriving_yojson

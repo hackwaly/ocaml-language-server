@@ -1,0 +1,4 @@
+S src
+B _build/src
+PKG lwt lwt.unix lwt.ppx yojson
+EXT lwt
